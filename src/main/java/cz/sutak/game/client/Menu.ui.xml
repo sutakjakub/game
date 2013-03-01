@@ -1,0 +1,52 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+
+	<ui:with field="res" type="cz.sutak.game.client.Resources" />
+	<ui:style>
+		table {
+			margin: auto;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+
+		<table>
+			<tr>
+				<td>
+					<g:PushButton ui:field='fight' enabled='true'>
+						<g:upFace image="{res.fight}" />
+						<g:upHoveringFace image="{res.logout}" />
+						<g:downFace image='{res.fight}' />
+						<g:downHoveringFace image='{res.logout}' />
+					</g:PushButton>
+				</td>
+				<td>
+					<g:PushButton ui:field='myCharacters' enabled='true'>
+						<g:upFace image="{res.myCharacters}" />
+						<g:upHoveringFace image="{res.myCharacters}" />
+						<g:downFace image='{res.myCharacters}' />
+						<g:downHoveringFace image='{res.myCharacters}' />
+					</g:PushButton>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<g:PushButton ui:field='statistics' enabled='true'>
+						<g:upFace image="{res.statistics}" />
+						<g:upHoveringFace image="{res.statistics}" />
+						<g:downFace image='{res.statistics}' />
+						<g:downHoveringFace image='{res.statistics}' />
+					</g:PushButton>
+				</td>
+				<td>
+					<g:PushButton ui:field='logout' enabled='true'>
+						<g:upFace image="{res.logout}" />
+						<g:upHoveringFace image="{res.logout}" />
+						<g:downFace image='{res.logout}' />
+						<g:downHoveringFace image='{res.logout}' />
+					</g:PushButton>
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

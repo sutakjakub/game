@@ -1,0 +1,2 @@
+serviceClass: cz.sutak.game.client.service.UserService
+path: A486698719FAF4DC0B705A5C623DC4C1.gwt.rpc

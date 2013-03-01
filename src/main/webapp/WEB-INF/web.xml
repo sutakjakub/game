@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+
+	<!-- ================= SPRING FRAMEWORK - START ================= -->
+    <context-param>
+        <description>Springove konfiguracni soubory teto aplikace</description>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>
+            /WEB-INF/context/*.xml
+        </param-value>        
+    </context-param>
+    <listener>
+        <description>Nahodi Spring context po startu serveru</description>
+        <listener-class>
+            org.springframework.web.context.ContextLoaderListener
+        </listener-class>
+    </listener>
+    <listener>
+        <description>Asociuje requesty s prislusnym vlaknem dotazu (slouzi predevsim jako podpora web frameworku)</description>
+        <listener-class>
+            org.springframework.web.context.request.RequestContextListener
+        </listener-class>
+    </listener>  
+    <!-- ================= SPRING FRAMEWORK - END ================= -->
+    
+ 
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>Game.html</welcome-file>
+  </welcome-file-list>
+  
+  	
+   <servlet>
+     <servlet-name>userService</servlet-name>
+     <servlet-class>cz.sutak.game.server.service.UserServiceImpl</servlet-class>
+   </servlet>
+  
+   <servlet-mapping>
+     <servlet-name>userService</servlet-name>
+     <url-pattern>/game/user</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+     <servlet-name>warriorService</servlet-name>
+     <servlet-class>cz.sutak.game.server.service.WarriorServiceImpl</servlet-class>
+   </servlet>
+  
+   <servlet-mapping>
+     <servlet-name>warriorService</servlet-name>
+     <url-pattern>/game/warrior</url-pattern>
+   </servlet-mapping>
+   
+
+</web-app>

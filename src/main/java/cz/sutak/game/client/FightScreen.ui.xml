@@ -1,0 +1,42 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		table {
+			text-align: center;
+		}
+	</ui:style>
+
+	<ui:with field="res" type="cz.sutak.game.client.Resources" />
+
+	<g:HTMLPanel>
+		<table border="1">
+			<tr>
+				<td></td>
+				<td>
+					<g:Image resource="{res.head}" />
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>
+					<g:Image resource="{res.rightHand}" />
+				</td>
+				<td>
+					<g:Image resource="{res.body}" />
+				</td>
+				<td>
+					<g:Image resource="{res.leftHand}" />
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<g:Image resource="{res.legs}" />
+				</td>
+				<td></td>
+			</tr>
+			<tr></tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 
