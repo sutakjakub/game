@@ -77,6 +77,12 @@
 
 		<dependency>
 			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-annotations</artifactId>
+			<version>3.3.1.GA</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
 			<artifactId>ejb3-persistence</artifactId>
 			<version>1.0.1.GA</version>
 		</dependency>
@@ -220,6 +226,15 @@
 		</testResources>
 
 		<plugins>
+			<!-- Skip tests -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.14</version>
+				<configuration>
+					<skipTests>true</skipTests>
+				</configuration>
+			</plugin>
 
 			<!-- GWT Maven Plugin -->
 			<plugin>
@@ -258,7 +273,7 @@
 					<hostedWebapp>${webappDirectory}</hostedWebapp>
 					<!-- Ask GWT to create the Story of Your Compile (SOYC) (gwt:compile) -->
 					<compileReport>true</compileReport>
-					<draftCompile>true</draftCompile>	
+					<draftCompile>true</draftCompile>
 				</configuration>
 				<executions>
 					<execution>

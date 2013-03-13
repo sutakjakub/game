@@ -6,10 +6,10 @@ import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
 @MappedSuperclass
-public class AbstractBussinessObject {
+public class AbstractBussinessObject{
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy= GenerationType.IDENTITY)
 	protected Long id;
 
 	public Long getId() {

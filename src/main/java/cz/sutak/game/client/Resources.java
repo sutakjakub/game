@@ -4,32 +4,46 @@ import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.ImageResource;
 
 public interface Resources extends ClientBundle {
-	@Source("fight.png")
-	ImageResource fight();
 	
-	@Source("statistics.png")
-	ImageResource statistics();
+	@Source("cz/sutak/game/client/pres/menu_hrej.png")
+	ImageResource menuHrej();
 	
+	@Source("cz/sutak/game/client/pres/menu_hrej_click.png")
+	ImageResource menuHrejClick(); 
+		
+	@Source("cz/sutak/game/client/pres/menu_statistics.png")
+	ImageResource menuStatistics();
 
-	@Source("myCharacters.jpg")
-	ImageResource myCharacters();
+	@Source("cz/sutak/game/client/pres/menu_statistics_click.png")
+	ImageResource menuStatisticsClick();
 	
+	@Source("cz/sutak/game/client/pres/menu_myCharacters.png")
+	ImageResource menuMyCharacters();
+	
+	@Source("cz/sutak/game/client/pres/menu_myCharacters_click.png")
+	ImageResource menuMyCharactersClick();
 
-	@Source("logout.png")
-	ImageResource logout();
+
+	@Source("cz/sutak/game/client/pres/menu_logout.png")
+	ImageResource menuLogout();
 	
-	@Source("head.png")
+	@Source("cz/sutak/game/client/pres/menu_logout_click.png")
+	ImageResource menuLogoutClick();
+	
+	
+	
+	@Source("cz/sutak/game/client/pres/head.png")
 	ImageResource head();
 	
-	@Source("body.png")
+	@Source("cz/sutak/game/client/pres/body.png")
 	ImageResource body();
 	
-	@Source("left-hand.png")
+	@Source("cz/sutak/game/client/pres/left-hand.png")
 	ImageResource leftHand();
 	
-	@Source("right-hand.png")
+	@Source("cz/sutak/game/client/pres/right-hand.png")
 	ImageResource rightHand();
 	
-	@Source("legs.png")
+	@Source("cz/sutak/game/client/pres/legs.png")
 	ImageResource legs();
 }

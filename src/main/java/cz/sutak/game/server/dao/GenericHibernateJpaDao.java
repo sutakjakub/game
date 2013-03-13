@@ -67,6 +67,7 @@ public class GenericHibernateJpaDao implements GenericDao {
 	public <ENTITY extends AbstractBussinessObject> ENTITY saveOrUpdate(ENTITY o) {
 		if(o.getId() == null){
 			getEntityManager().persist(o);
+			getEntityManager().flush();
 		}else{
 			getEntityManager().merge(o);
 		}

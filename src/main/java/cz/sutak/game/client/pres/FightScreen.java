@@ -1,4 +1,4 @@
-package cz.sutak.game.client;
+package cz.sutak.game.client.pres;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;

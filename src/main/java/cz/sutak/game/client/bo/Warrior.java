@@ -10,7 +10,9 @@ import javax.persistence.ManyToOne;
 import cz.sutak.game.client.dto.WarriorDto;
 
 @Entity
-public class Warrior extends AbstractBussinessObject implements Serializable {
+public class Warrior extends AbstractBussinessObject implements Serializable{
+
+	private static final long serialVersionUID = -9150463710954832498L;
 
 	@JoinColumn(name = "user_id")
 	@ManyToOne

@@ -14,6 +14,7 @@ import com.google.gwt.user.client.ui.DockLayoutPanel;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
 
 import cz.sutak.game.client.CenterPanel;
+import cz.sutak.game.client.pres.TopPanel;
 
 /**
  * Entry point classes define <code>onModuleLoad()</code>.

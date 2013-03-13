@@ -1,4 +1,4 @@
-package cz.sutak.game.client;
+package cz.sutak.game.client.pres;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -29,6 +29,21 @@ public class TopPanel extends Composite {
 
 	@UiHandler("signOutLink")
 	public void onSignOutLinkHandler(ClickEvent event) {
+//		WarriorService.Util.getInstance().addWarrior("myWar", new Long(472), new AsyncCallback<Long>() {
+//
+//			@Override
+//			public void onFailure(Throwable caught) {
+//				Window.alert("chyba" + caught);
+//				
+//			}
+//
+//			@Override
+//			public void onSuccess(Long result) {
+//				Window.alert("ID="+result);
+//				
+//			}
+//		});
+		
 		 UserService.Util.getInstance().addUser("kuba","tajne",
 		 new AsyncCallback<Long>() {
 		
@@ -49,22 +64,6 @@ public class TopPanel extends Composite {
 		 }
 		
 		 });
-//		 PersonService.Util.getInstance().addPerson("koubes", new
-//		 AsyncCallback<Long>(){
-//		
-//		 @Override
-//		 public void onFailure(Throwable caught) {
-//		 Window.alert("chyba (po singletonu): " + caught);
-//		
-//		 }
-//		
-//		 @Override
-//		 public void onSuccess(Long result) {
-//		 Window.alert("tvoje id (po db) je: " + result);
-//		
-//		 }
-//		
-//		 });
 
 //		UserService.Util.getInstance().getUsers(
 //				new AsyncCallback<List<UserDto>>() {

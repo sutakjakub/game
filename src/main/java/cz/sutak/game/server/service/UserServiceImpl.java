@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import cz.sutak.game.client.bo.User;
@@ -15,9 +15,11 @@ import cz.sutak.game.client.dto.WarriorDto;
 import cz.sutak.game.client.service.UserService;
 import cz.sutak.game.client.service.WarriorService;
 
-@Service
+@Component
 public class UserServiceImpl extends
 		AutowiringRemoteServiceServletAndGenericDAO implements UserService {
+
+	private static final long serialVersionUID = -6334357198682815602L;
 
 	@Autowired
 	private WarriorService ws;
@@ -96,9 +98,8 @@ public class UserServiceImpl extends
 			user.setPassword(password);
 			try {
 				id = genericDao.saveOrUpdate(user).getId();
-				logger.info("vytvoren user; id="+id);
+				logger.debug("ID od nového usera: " + id);
 			} catch (Exception exp) {
-				logger.error(exp);
 			}
 		}
 		return id;

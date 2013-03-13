@@ -1,4 +1,4 @@
-package cz.sutak.game.client;
+package cz.sutak.game.client.pres;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -9,6 +9,8 @@ import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.PushButton;
 import com.google.gwt.user.client.ui.Widget;
 
+import cz.sutak.game.client.ContentCenterPanel;
+
 public class Menu extends Composite {	
 
 	private static MenuUiBinder uiBinder = GWT.create(MenuUiBinder.class);
@@ -17,44 +19,44 @@ public class Menu extends Composite {
 	}
 	
 	@UiField
-	PushButton fight;
+	PushButton menuHrej;
 	
 	@UiField
-	PushButton myCharacters;
+	PushButton menuMyCharacters;
 
 	@UiField
-	PushButton statistics;
+	PushButton menuStatistics;
 
 	@UiField
-	PushButton logout;
+	PushButton menuLogout;
 	
 	ContentCenterPanel c = ContentCenterPanel.getInstance();
 
 	public Menu() {
 		initWidget(uiBinder.createAndBindUi(this));
 		
-		fight.addClickHandler(new ClickHandler() {
+		menuHrej.addClickHandler(new ClickHandler() {
+		     @Override
+	         public void onClick(ClickEvent event) {
+	            c.showWidget(1);
+	         }
+	      });
+		
+		menuMyCharacters.addClickHandler(new ClickHandler() {
 		     @Override
 	         public void onClick(ClickEvent event) {
 	            c.showWidget(2);
 	         }
 	      });
 		
-		myCharacters.addClickHandler(new ClickHandler() {
+		menuStatistics.addClickHandler(new ClickHandler() {
 		     @Override
 	         public void onClick(ClickEvent event) {
 	            c.showWidget(3);
 	         }
 	      });
 		
-		statistics.addClickHandler(new ClickHandler() {
-		     @Override
-	         public void onClick(ClickEvent event) {
-	            c.showWidget(4);
-	         }
-	      });
-		
-		logout.addClickHandler(new ClickHandler() {
+		menuLogout.addClickHandler(new ClickHandler() {
 		     @Override
 	         public void onClick(ClickEvent event) {
 	            //tady bude spring - security

@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,9 @@ import cz.sutak.game.client.provider.HashProvider;
 @Configurable(preConstruction=true)
 public class User extends AbstractBussinessObject implements Serializable {
 
-	@OneToMany(mappedBy = "user")
+	private static final long serialVersionUID = -3260983960240668101L;
+
+	@OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
 	private List<Warrior> warriors;
 
 	@Column(nullable = false)

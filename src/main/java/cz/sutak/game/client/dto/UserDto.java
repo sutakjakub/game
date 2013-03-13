@@ -5,6 +5,8 @@ import java.util.List;
 
 public class UserDto extends AbstractDto implements Serializable{
 
+	private static final long serialVersionUID = 599671073229894036L;
+	
 	private List<WarriorDto> warriors;
 	private String name;
 	private String password;

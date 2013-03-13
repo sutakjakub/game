@@ -7,7 +7,6 @@ import org.springframework.transaction.annotation.Transactional;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.rpc.RemoteService;
 import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
-import com.google.gwt.user.client.rpc.ServiceDefTarget;
 
 import cz.sutak.game.client.bo.User;
 import cz.sutak.game.client.dto.UserDto;
@@ -24,7 +23,7 @@ public interface UserService extends RemoteService {
 	 */
 	@Transactional(readOnly = true)
 	public List<UserDto> getUsers();
-	
+
 	/**
 	 * Vrací usera podle id
 	 * 
@@ -33,7 +32,7 @@ public interface UserService extends RemoteService {
 	 */
 	@Transactional(readOnly = true)
 	public UserDto getUserById(Long id);
-	
+
 	/**
 	 * Vrací usera podle id
 	 * 
@@ -42,7 +41,7 @@ public interface UserService extends RemoteService {
 	 */
 	@Transactional(readOnly = true)
 	public User getUserBOById(Long id);
-	
+
 	/**
 	 * Vrací usera podle name
 	 * 
@@ -88,7 +87,7 @@ public interface UserService extends RemoteService {
 	 */
 	@Transactional(readOnly = true)
 	public List<WarriorDto> getWarriors(Long id);
-	
+
 	/**
 	 * Transformuje User na UserDto
 	 * 
@@ -110,5 +109,5 @@ public interface UserService extends RemoteService {
 			return instance;
 		}
 	}
-	
+
 }
