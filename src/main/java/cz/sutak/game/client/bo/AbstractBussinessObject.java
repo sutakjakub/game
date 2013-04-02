@@ -1,12 +1,14 @@
 package cz.sutak.game.client.bo;
 
+import java.io.Serializable;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
 @MappedSuperclass
-public class AbstractBussinessObject{
+public class AbstractBussinessObject implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy= GenerationType.IDENTITY)

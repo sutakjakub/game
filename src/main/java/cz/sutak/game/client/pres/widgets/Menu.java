@@ -20,7 +20,7 @@ public class Menu extends Content {
 
 	public Menu() {
 		//nastavení title (browser)
-		setTitle("Menu");
+		setTitle("menu");
 		
 		initWidget(uiBinder.createAndBindUi(this));
 		
@@ -34,7 +34,7 @@ public class Menu extends Content {
 		menuMyCharacters.addClickHandler(new ClickHandler() {
 		     @Override
 	         public void onClick(ClickEvent event) {
-//	            ContentContainer.getInstance().setContent(new MyCharacters());
+	            ContentContainer.getInstance().setContent(new MyCharacters());
 	         }
 	      });
 

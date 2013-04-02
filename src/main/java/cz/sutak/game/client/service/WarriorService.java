@@ -6,12 +6,14 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.rpc.RemoteService;
+import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 
 import cz.sutak.game.client.bo.Warrior;
 import cz.sutak.game.client.dto.UserDto;
 import cz.sutak.game.client.dto.WarriorDto;
 
 @Transactional
+@RemoteServiceRelativePath("warrior")
 public interface WarriorService extends RemoteService{
 
 	/**

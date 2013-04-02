@@ -1,5 +1,28 @@
 @CHARSET "UTF-8";
 
-* {
+#container {
+	width: 75%;
+	margin: 0 auto;
+	padding: 0px;
+	margin: 0px;
+	background-color: black;
+}
 
+#header {
+	width: 100%;
+	border-bottom: 1px solid black;
+	min-height: 10%; 
+	background-color: red;
+}
+
+#content{
+	width: 100%;
+	border: 1px solid black;
+	min-height: 70%;
+	background-color: green;
+}
+
+#backButton {
+	text-align: right;
+	width: 100%;
 }

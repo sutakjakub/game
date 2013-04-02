@@ -5,9 +5,7 @@ import java.io.Serializable;
 import cz.sutak.game.client.bo.User;
 
 public class WarriorDto extends AbstractDto implements Serializable{
-	
-	private static final long serialVersionUID = -1740971299137567698L;
-	
+		
 	private User user;
 	private String name;
 	private Integer extraPoint;

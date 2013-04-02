@@ -1,10 +1,7 @@
 package cz.sutak.game.client.pres.widgets;
 
-import com.google.gwt.dom.client.Style.Unit;
-import com.google.gwt.user.client.ui.DockLayoutPanel;
-import com.google.gwt.user.client.ui.HTML;
-import com.google.gwt.user.client.ui.PushButton;
 import com.google.gwt.user.client.ui.TextArea;
+import com.google.gwt.user.client.ui.VerticalPanel;
 
 import cz.sutak.game.client.Content;
 
@@ -12,15 +9,14 @@ public class Hrej extends Content {
 
 	public Hrej() {
 		setPanel();
+		initWidget(panel);
 	}
 	
-	private DockLayoutPanel panel;
+	private VerticalPanel panel;
 	
 	private void setPanel(){
-		panel = new DockLayoutPanel(Unit.EM);
-
-		panel.addWest(new PushButton("zpet"), 5);
-		panel.addEast(new TextArea(), 10);
-		panel.add(new PushButton("widget fightera"));
+		setTitle("hrej");
+		panel = new VerticalPanel();
+		panel.add(new TextArea());
 	}	
 }
