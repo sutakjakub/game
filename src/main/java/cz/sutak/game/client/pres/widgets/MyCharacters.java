@@ -19,6 +19,7 @@ import com.google.gwt.user.client.ui.VerticalPanel;
 
 import cz.sutak.game.client.Content;
 import cz.sutak.game.client.dto.WarriorDto;
+import cz.sutak.game.client.service.UserService;
 import cz.sutak.game.client.service.WarriorService;
 
 public class MyCharacters extends Content {
@@ -66,6 +67,7 @@ public class MyCharacters extends Content {
 		});
 
 		textBox.setFocus(true);
+		addPanel.add(lastUpdatedLabel);
 	}
 
 	private void setMainPanel() {
@@ -95,7 +97,7 @@ public class MyCharacters extends Content {
 		}
 
 		// Přidej warriora do tabulky
-		WarriorService.Util.getInstance().addWarrior(symbol, new Long(1),
+		WarriorService.Util.getInstance().addWarrior(symbol, new Long(56),
 				new AsyncCallback<Long>() {
 
 					@Override
@@ -105,14 +107,31 @@ public class MyCharacters extends Content {
 
 					@Override
 					public void onSuccess(Long result) {
-						Window.alert("Nový warrior s id " + result + "přidán!");
-
+						Window.alert("Nový warrior s id '" + result
+								+ "' přidán!");
 					}
 
 				});
 
 		// aktualizuj tabulku
-		updateTable();
+//		updateTable();
+		WarriorService.Util.getInstance().getAllWarriors(
+				new AsyncCallback<List<WarriorDto>>() {
+
+					@Override
+					public void onFailure(Throwable caught) {
+						Window.alert("nepodarilo se udelat list v metode updateTable() \n"
+								+ caught);
+						warriors = null;
+
+					}
+
+					@Override
+					public void onSuccess(List<WarriorDto> result) {
+						warriors = (ArrayList<WarriorDto>) result;
+					}
+
+				});
 	}
 
 	private void updateTable() {

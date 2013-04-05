@@ -19,8 +19,6 @@ import cz.sutak.game.client.service.WarriorService;
 public class UserServiceImpl extends
 		AutowiringRemoteServiceServletAndGenericDAO implements UserService {
 
-	private static final long serialVersionUID = -6334357198682815602L;
-
 	@Autowired
 	private WarriorService ws;
 	

@@ -20,9 +20,7 @@ import cz.sutak.game.client.provider.HashProvider;
 @Configurable(preConstruction=true)
 public class User extends AbstractBussinessObject implements Serializable {
 
-	private static final long serialVersionUID = -3260983960240668101L;
-
-	@OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
 	private List<Warrior> warriors;
 
 	@Column(nullable = false)

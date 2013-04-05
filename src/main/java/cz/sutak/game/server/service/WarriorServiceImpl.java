@@ -99,7 +99,7 @@ public class WarriorServiceImpl extends
 		Warrior warrior = new Warrior();
 		User user = null;
 		Long idWar = null;
-
+		UserDto userDto = null;
 		if (name != null && userId != null) {
 			try {
 				user = genericDao.getById(userId, User.class);
